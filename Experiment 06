@@ -1,0 +1,30 @@
+mysql> SELECT CourseNo,count(CourseNo) FROM Course GROUP BY CourseNo;
++----------+-----------------+
+| CourseNo | count(CourseNo) |
++----------+-----------------+
+| C001     |               2 |
+| C002     |               2 |
+| C003     |               2 |
++----------+-----------------+
+3 rows in set (0.09 sec)
+
+
+mysql> SELECT CourseNo,count(Scores) FROM Course GROUP BY CourseNo;
++----------+---------------+
+| CourseNo | count(Scores) |
++----------+---------------+
+| C001     |             2 |
+| C002     |             2 |
+| C003     |             2 |
++----------+---------------+
+3 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM faculty ORDER BY DOB;
++-------+---------+--------+------------+------------+------------+
+| FacNo | FacName | Gender | DOB        | DOJ        | MobileNo   |
++-------+---------+--------+------------+------------+------------+
+| CA15  | SOMU    | M      | 1980-10-20 | 2020-07-19 |   56816652 |
+| CA13  | PALANI  | M      | 1990-10-02 | 2018-08-27 | 1976667893 |
++-------+---------+--------+------------+------------+------------+
+2 rows in set (0.00 sec)
