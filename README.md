@@ -22,3 +22,18 @@
 ## Experiment 6
 [Experiment 6 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%206)
 ![image](https://user-images.githubusercontent.com/113223779/191209585-65b78aa4-3532-4bc6-9d6b-a11a637e533d.png)
+
+## Experiment 7
+[Experiment 7 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%207)
+![image](https://user-images.githubusercontent.com/113223779/191210397-8aabd94c-0778-4436-bccf-1b8a1470c9e5.png)
+
+##Experiment 8
+[Experiment 8 Queries]()
+
+## Experiment 9
+[Experiment 9 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%209)
+![image](https://user-images.githubusercontent.com/113223779/191211197-547aabad-05df-48cc-ab9b-cb4f3db48752.png)
+
+## Experiment 10
+[Experiment 10 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2010)
+![image](https://user-images.githubusercontent.com/113223779/191211732-06da8422-0583-443f-b581-06de630557a3.png)
