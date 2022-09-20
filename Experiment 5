@@ -1,17 +1,69 @@
-mysql> ALTER TABLE faculty ADD Deptno varchar(4);
-Query OK, 0 rows affected (0.34 sec)
-Records: 0  Duplicates: 0  Warnings: 0
+mysql> SELECT * FROM course;
++----------+------------+-------------+--------+
+| CourseNo | RegisterNo | CourseDesc  | Scores |
++----------+------------+-------------+--------+
+| C001     |  191811306 | Mathematics |     93 |
+| C001     |  191811307 | Mathematics |     80 |
+| C002     |  191811306 | OOAD        |     75 |
+| C002     |  191811307 | OOAD        |     85 |
+| C003     |  191811306 | DBMS        |     91 |
+| C003     |  191811307 | DBMS        |     93 |
++----------+------------+-------------+--------+
+6 rows in set (0.00 sec)
 
-mysql> desc faculty;
-+----------+------------+------+-----+---------+-------+
-| Field    | Type       | Null | Key | Default | Extra |
-+----------+------------+------+-----+---------+-------+
-| FacNo    | varchar(4) | YES  |     | NULL    |       |
-| FacName  | char(15)   | YES  |     | NULL    |       |
-| Gender   | char(1)    | YES  |     | NULL    |       |
-| DOB      | int        | YES  |     | NULL    |       |
-| DOJ      | int        | YES  |     | NULL    |       |
-| MobileNo | int        | YES  |     | NULL    |       |
-| Deptno   | varchar(4) | YES  |     | NULL    |       |
-+----------+------------+------+-----+---------+-------+
-7 rows in set (0.00 sec)
+
+mysql> SELECT CourseNo FROM Course WHERE Scores BETWEEN 50 AND 80;
++----------+
+| CourseNo |
++----------+
+| C001     |
+| C002     |
++----------+
+2 rows in set (0.00 sec)
+
+
+mysql> SELECT AVG(Scores) FROM Course;
++-------------+
+| AVG(Scores) |
++-------------+
+|     86.1667 |
++-------------+
+1 row in set (0.03 sec)
+
+
+mysql> SELECT MAX(Scores) , MIN(Scores) FROM Course;
++-------------+-------------+
+| MAX(Scores) | MIN(Scores) |
++-------------+-------------+
+|          93 |          75 |
++-------------+-------------+
+1 row in set (0.01 sec)
+
+
+mysql> SELECT MAX(Scores) , MIN(Scores) , AVG(Scores) FROM Course;
++-------------+-------------+-------------+
+| MAX(Scores) | MIN(Scores) | AVG(Scores) |
++-------------+-------------+-------------+
+|          93 |          75 |     86.1667 |
++-------------+-------------+-------------+
+1 row in set (0.00 sec)
+
+
+mysql> SELECT AVG(Scores) FROM Course WHERE CourseNo LIKE 'C001';
++-------------+
+| AVG(Scores) |
++-------------+
+|     86.5000 |
++-------------+
+1 row in set (0.02 sec)
+
+
+mysql> SELECT SUM(Scores) FROM Course;
++-------------+
+| SUM(Scores) |
++-------------+
+|         517 |
++-------------+
+1 row in set (0.00 sec)
+
+
