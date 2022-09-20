@@ -1,0 +1,20 @@
+mysql> create database sse;
+Query OK, 1 row affected (0.13 sec)
+
+mysql> use sse;
+Database changed
+mysql> CREATE TABLE student(RegNo int(3), Name varchar(15), Gender char(1), DOB int(10), MobileNo int(10), City char(10));
+Query OK, 0 rows affected, 3 warnings (0.42 sec)
+
+mysql> desc student;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| RegNo    | int         | YES  |     | NULL    |       |
+| Name     | varchar(15) | YES  |     | NULL    |       |
+| Gender   | char(1)     | YES  |     | NULL    |       |
+| DOB      | int         | YES  |     | NULL    |       |
+| MobileNo | int         | YES  |     | NULL    |       |
+| City     | char(10)    | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.19 sec)
