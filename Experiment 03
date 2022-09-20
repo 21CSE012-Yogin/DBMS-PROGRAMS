@@ -1,1 +1,13 @@
+mysql> INSERT INTO sse.student VALUES(192125999,"GUGAN","M","2002-11-14",98901310,"CHENNAI");
+Query OK, 1 row affected (1.26 sec)
+
+mysql> SELECT * FROM sse.student;
++-----------+-------+--------+------------+----------+---------+
+| RegNo     | Name  | Gender | DOB        | MobileNo | City    |
++-----------+-------+--------+------------+----------+---------+
+| 191711342 | Raju  | M      | 2002-11-14 | 77319232 | chirala |
+| 192125999 | GUGAN | M      | 2002-11-14 | 98901310 | CHENNAI |
++-----------+-------+--------+------------+----------+---------+
+2 rows in set (0.00 sec)
+
 
