@@ -35,7 +35,7 @@
 ![image](https://user-images.githubusercontent.com/113223779/191277948-1fea4f8b-13ee-4c78-8c69-69230dddb350.png)
 
 ## Experiment 05
-[Experiment 05 Queries]()
+[Experiment 05 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2005)
 
 ![image](https://user-images.githubusercontent.com/113223779/191302166-90250c3d-ff41-4ebf-a6fd-ae58684f5630.png)
 
