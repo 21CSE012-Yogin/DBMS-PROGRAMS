@@ -1,0 +1,17 @@
+mysql> use sse;
+Database changed
+mysql> CREATE TABLE faculty(FacNo varchar(4),FacName char(15), Gender char(1), DOB int(10),DOJ int(10),MobileNo int(10));
+Query OK, 0 rows affected, 3 warnings (0.20 sec)
+
+mysql> desc faculty;
++----------+------------+------+-----+---------+-------+
+| Field    | Type       | Null | Key | Default | Extra |
++----------+------------+------+-----+---------+-------+
+| FacNo    | varchar(4) | YES  |     | NULL    |       |
+| FacName  | char(15)   | YES  |     | NULL    |       |
+| Gender   | char(1)    | YES  |     | NULL    |       |
+| DOB      | int        | YES  |     | NULL    |       |
+| DOJ      | int        | YES  |     | NULL    |       |
+| MobileNo | int        | YES  |     | NULL    |       |
++----------+------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
