@@ -1,0 +1,17 @@
+mysql> ALTER TABLE faculty ADD Deptno varchar(4);
+Query OK, 0 rows affected (0.34 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc faculty;
++----------+------------+------+-----+---------+-------+
+| Field    | Type       | Null | Key | Default | Extra |
++----------+------------+------+-----+---------+-------+
+| FacNo    | varchar(4) | YES  |     | NULL    |       |
+| FacName  | char(15)   | YES  |     | NULL    |       |
+| Gender   | char(1)    | YES  |     | NULL    |       |
+| DOB      | int        | YES  |     | NULL    |       |
+| DOJ      | int        | YES  |     | NULL    |       |
+| MobileNo | int        | YES  |     | NULL    |       |
+| Deptno   | varchar(4) | YES  |     | NULL    |       |
++----------+------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
