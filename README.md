@@ -28,11 +28,7 @@
 ## Experiment 03
 [Experiment 03 Outputs]()
 
-![image](https://user-images.githubusercontent.com/113223779/191269158-5818cf9a-0844-4828-8d1a-731c71d2a5a1.png)
 
-![image](https://user-images.githubusercontent.com/113223779/191270190-18ef1c9a-4812-4b71-91a4-2de1a8902de4.png)
-
-![image](https://user-images.githubusercontent.com/113223779/191277948-1fea4f8b-13ee-4c78-8c69-69230dddb350.png)
 
 ## Experiment 05
 [Experiment 05 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2005)
