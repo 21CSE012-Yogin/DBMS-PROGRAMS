@@ -1,0 +1,35 @@
+mysql> create procedure stud_info()
+    -> select * from stud_info;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call stud_info();
++-------+-------+-----------+---------+
+| stuid | name  | area      | subject |
++-------+-------+-----------+---------+
+|   201 | raj   | chennai   | subject |
+|   202 | rahul | hyderabad | c       |
+|   203 | rahin | mumbai    | java    |
+|   204 | vikas | kochi     | python  |
++-------+-------+-----------+---------+
+4 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+
+mysql> create procedure getcustomerlevel(
+    -> in p_customernumber int(11),
+    -> out p_customerlevel varchar(10))
+    -> begin
+    -> declare creditlim double;
+    -> select creditlimit into creditlim
+    -> from customers
+    -> where customernumber=p_customernumber;
+    -> if creditlim>50000 then
+    -> set p_customerlevel='PLATINUM';
+    -> elseif (creditlim <= 50000 and creditlim >= 10000) then
+    -> set p_customerlevel='GOLD';
+    -> elseif creditlim < 10000 then
+    -> set p_customerlevel='SILVER';
+    -> end if;
+    -> end;
+    -> //
