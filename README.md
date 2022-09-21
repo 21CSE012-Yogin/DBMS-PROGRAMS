@@ -30,6 +30,15 @@
 
 ![image](https://user-images.githubusercontent.com/113223779/191415773-e16f5382-782a-4d1e-ba3c-655b612a9f09.png)
 
+## Experiment 04
+[Experiment 04 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2004)
+
+<img width="593" alt="191298252-fa936a83-a314-4272-9010-cf3b5d172d2b" src="https://user-images.githubusercontent.com/113223779/191422635-b76345db-f000-49b8-83fb-005aa9fbc755.png">
+
+![image](https://user-images.githubusercontent.com/113223779/191422693-5a867e5f-9e2e-4bfa-8370-90933f9aaf61.png)
+
+![image](https://user-images.githubusercontent.com/113223779/191422745-693fb30a-6f4d-4794-903f-28491bc61811.png)
+
 
 ## Experiment 05
 [Experiment 05 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2005)
