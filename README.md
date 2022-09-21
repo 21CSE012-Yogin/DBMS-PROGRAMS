@@ -63,3 +63,9 @@
 ![image](https://user-images.githubusercontent.com/113223779/191311451-0e8ce280-bd0a-487c-8382-fc73bcc00d02.png)
 
 ![image](https://user-images.githubusercontent.com/113223779/191311506-7275284d-ed72-455f-9afa-e3f0cefd9524.png)
+
+## Experiment 07
+[Experiment 07 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2007)
+
+![image](https://user-images.githubusercontent.com/113223779/191423205-b535b04e-16c5-4b10-a71b-87108863e726.png)
+
