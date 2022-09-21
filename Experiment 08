@@ -1,0 +1,27 @@
+mysql> use faculty;
+Database changed
+mysql> select fac.fno,fac.fname,depart.deptno,depart.dname from fac cross join depart;
++------+-------+--------+-------+
+| fno  | fname | deptno | dname |
++------+-------+--------+-------+
+|   11 | ramya | A23    | AIDS  |
++------+-------+--------+-------+
+1 row in set (0.00 sec)
+
+mysql> select student.stdname,student.stdmark,course.courseno from student inner join course on student.courseno=course.courseno;
++---------+---------+----------+
+| stdname | stdmark | courseno |
++---------+---------+----------+
+| Ramu    |      90 | CS2      |
+| Geetha  |      86 | CS2      |
+| Pooja   |      93 | CS2      |
++---------+---------+----------+
+9 rows in set (0.02 sec)
+
+mysql> select factcourse from fact where factname='Kamal' and factdept='ECE';
++------------+
+| factcourse |
++------------+
+| OS         |
++------------+
+1 row in set (0.00 sec)
