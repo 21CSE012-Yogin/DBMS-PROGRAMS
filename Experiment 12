@@ -1,0 +1,67 @@
+mysql> create function incomelevel (monthly_value int)
+    -> returns varchar(20)
+    ->
+    -> begin
+    ->
+    ->    declare income_level varchar(20);
+    ->    case monthly_value
+    ->         when 4000 then
+    ->            set income_level = 'Low Income';
+    ->         when 5000 then
+    ->            set income_level = 'Avg Income';
+    ->         else
+    ->            set income_level = 'High Income';
+    ->    end case;
+    ->    return income_level;
+    -> end;
+    -> //
+Query OK, 0 rows affected (0.04 sec)
+
+
+mysql> select incomelevel(5300);//
++-------------------+
+| incomelevel(5300) |
++-------------------+
+| High Income       |
++-------------------+
+1 row in set (0.05 sec)
+
+
+mysql> delimiter //
+mysql>
+mysql> create function calcincome2 (starting_value int)
+    -> return int
+    -> return int\\
+ERROR:
+Unknown command '\\'.
+    -> //
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'return int
+return int\\' at line 2
+
+
+mysql> delimiter //
+mysql> create function calcincome2 (starting_value int)
+    -> returns int
+    -> begin
+    -> declare income int;
+    -> set income=0;
+    -> label1: loop
+    -> set income = income + starting_value;
+    -> if income < 4000 then
+    -> iterate label1;
+    -> end if;
+    -> leave label1;
+    -> end loop label1;
+    -> return income;
+    -> end;//
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> select calcincome2(2100);
+    -> //
++-------------------+
+| calcincome2(2100) |
++-------------------+
+|              4200 |
++-------------------+
+1 row in set (0.00 sec)
