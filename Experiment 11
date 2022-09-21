@@ -1,0 +1,47 @@
+mysql> use faculty
+Database changed
+mysql> delimiter //
+mysql> create procedure test_mysql_while_loop()
+    -> begin
+    -> declare x int;
+    -> declare str varchar(255);
+    ->
+    -> set x=1;
+    ->
+    -> set str='';
+    ->
+    -> while x<=5 do
+    -> set str=concat(str,x,',');
+    -> set x=x+1;
+    -> end while;
+    ->
+    -> select str;
+    -> end
+    -> //
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> call test_mysql_while_loop() //
++------------+
+| str        |
++------------+
+| 1,2,3,4,5, |
++------------+
+1 row in set (0.04 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> delimiter //
+mysql> create procedure dorepeat(p1 int) begin set @x=0; repeat set @x=@x+1;until @x>p1 end repeat; end //
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> call dorepeat(4001) //
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select @x;
+    -> //
++------+
+| @x   |
++------+
+| 4002 |
++------+
+1 row in set (0.00 sec)
