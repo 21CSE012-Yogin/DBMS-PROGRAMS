@@ -1,20 +1,21 @@
-mysql> alter table sse.course add primary key(courseno);
-Query OK, 0 rows affected (0.26 sec)
-Records: 0  Duplicates: 0  Warnings: 0
+mysql> use faculty;
+Database changed
+mysql> select * from stud_view;
++-----------+--------------+
+| Regno     | Name_And_DOB |
++-----------+--------------+
+| 191811164 |            0 |
+| 191811144 |            0 |
+|  19181134 |            0 |
+|  19181124 |            0 |
+|  19181114 |            0 |
++-----------+--------------+
+5 rows in set (0.00 sec)
 
-mysql> alter table sse.course add check(semno>=1&&semno<=6);
-Query OK, 0 rows affected, 1 warning (0.57 sec)
-Records: 0  Duplicates: 0  Warnings: 1
-
-mysql> desc sse.course;
-+------------+-------------+------+-----+---------+-------+
-| Field      | Type        | Null | Key | Default | Extra |
-+------------+-------------+------+-----+---------+-------+
-| courseNo   | varchar(3)  | NO   | PRI | NULL    |       |
-| coursedesc | varchar(14) | YES  |     | NULL    |       |
-| coursetype | char(1)     | YES  |     | NULL    |       |
-| Semno      | char(1)     | YES  |     | NULL    |       |
-| Hallno     | varchar(4)  | YES  |     | NULL    |       |
-| Facno      | varchar(4)  | YES  |     | NULL    |       |
-+------------+-------------+------+-----+---------+-------+
-6 rows in set (0.00 sec)
+mysql> show index from stud;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| stud  |          1 | Regno    |            1 | RegNo       | A         |           5 |     NULL | NULL   | YES  | BTREE      |         |               |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+1 row in set (0.00 sec)
