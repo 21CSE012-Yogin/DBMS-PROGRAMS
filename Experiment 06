@@ -1,30 +1,36 @@
-mysql> SELECT CourseNo,count(CourseNo) FROM Course GROUP BY CourseNo;
-+----------+-----------------+
-| CourseNo | count(CourseNo) |
-+----------+-----------------+
-| C001     |               2 |
-| C002     |               2 |
-| C003     |               2 |
-+----------+-----------------+
-3 rows in set (0.09 sec)
-
-
-mysql> SELECT CourseNo,count(Scores) FROM Course GROUP BY CourseNo;
-+----------+---------------+
-| CourseNo | count(Scores) |
-+----------+---------------+
-| C001     |             2 |
-| C002     |             2 |
-| C003     |             2 |
-+----------+---------------+
+mysql> select *from w.course where course_type="s";
++-----------+--------------+-------------+--------+---------+--------+
+| course_no | course_descr | course_type | sem_no | hall_no | fac_no |
++-----------+--------------+-------------+--------+---------+--------+
+|         2 | bio          | s           |      2 |    NULL |   4777 |
+|        11 | sci          | s           |      2 |    NULL |   4878 |
+|        21 | sci          | s           |      2 |    NULL |   4118 |
++-----------+--------------+-------------+--------+---------+--------+
 3 rows in set (0.00 sec)
 
 
-mysql> SELECT * FROM faculty ORDER BY DOB;
-+-------+---------+--------+------------+------------+------------+
-| FacNo | FacName | Gender | DOB        | DOJ        | MobileNo   |
-+-------+---------+--------+------------+------------+------------+
-| CA15  | SOMU    | M      | 1980-10-20 | 2020-07-19 |   56816652 |
-| CA13  | PALANI  | M      | 1990-10-02 | 2018-08-27 | 1976667893 |
-+-------+---------+--------+------------+------------+------------+
-2 rows in set (0.00 sec)
+mysql> select *from w.course where course_type="p";
++-----------+--------------+-------------+--------+---------+--------+
+| course_no | course_descr | course_type | sem_no | hall_no | fac_no |
++-----------+--------------+-------------+--------+---------+--------+
+|         1 | bio          | p           |      3 |     243 |   4313 |
+|         6 | hum          | p           |      3 |     445 |   4645 |
+|         7 | sci          | p           |      4 |     246 |   4343 |
+|         9 | hum          | p           |      4 |     475 |   4345 |
++-----------+--------------+-------------+--------+---------+--------+
+4 rows in set (0.00 sec)
+
+
+mysql> select course_no,course_descr,tot_reg from w.course;
++-----------+--------------+---------+
+| course_no | course_descr | tot_reg |
++-----------+--------------+---------+
+|         1 | bio          |       2 |
+|         2 | bio          |       1 |
+|         6 | hum          |       2 |
+|         7 | sci          |    NULL |
+|         9 | hum          |       2 |
+|        11 | sci          |    NULL |
+|        21 | sci          |       1 |
++-----------+--------------+---------+
+7 rows in set (0.00 sec)
