@@ -122,3 +122,7 @@
 ![image](https://user-images.githubusercontent.com/113223779/191532115-69ee567c-59dd-4702-ba92-e3a42f5aefd2.jpg)
 
 
+## Experiment 15
+[Experiment 15 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2015)
+
+![image](https://user-images.githubusercontent.com/113223779/191556990-e0e606a7-9954-4f90-bd8e-f6c0a9a55fd3.jpg)
