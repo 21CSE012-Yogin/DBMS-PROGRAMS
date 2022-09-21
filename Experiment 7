@@ -1,23 +1,44 @@
-mysql> use sse;
-Database changed
-mysql> alter table sse.faculty add primary key(facno);
-Query OK, 0 rows affected (0.32 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-
-mysql> alter table sse.faculty add check(gender='M'or'F');
-Query OK, 0 rows affected (0.35 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-
-mysql> desc sse.faculty;
-+----------+------------+------+-----+---------+-------+
-| Field    | Type       | Null | Key | Default | Extra |
-+----------+------------+------+-----+---------+-------+
-| FacNo    | varchar(4) | NO   | PRI | NULL    |       |
-| FacName  | char(15)   | YES  |     | NULL    |       |
-| Gender   | char(1)    | YES  |     | NULL    |       |
-| DOB      | int        | YES  |     | NULL    |       |
-| DOJ      | int        | YES  |     | NULL    |       |
-| MobileNo | int        | YES  |     | NULL    |       |
-| Deptno   | varchar(4) | YES  |     | NULL    |       |
-+----------+------------+------+-----+---------+-------+
+mysql> select course_no,course_descr,tot_reg from w.course;
++-----------+--------------+---------+
+| course_no | course_descr | tot_reg |
++-----------+--------------+---------+
+|         1 | bio          |       2 |
+|         2 | bio          |       1 |
+|         6 | hum          |       2 |
+|         7 | sci          |    NULL |
+|         9 | hum          |       2 |
+|        11 | sci          |    NULL |
+|        21 | sci          |       1 |
++-----------+--------------+---------+
 7 rows in set (0.00 sec)
+
+mysql> select name, gender, mobile_no from w.student order by reg_no;
++------------+--------+-----------+
+| name       | gender | mobile_no |
++------------+--------+-----------+
+| hari       | m      |     93981 |
+| durga      | m      |    728799 |
+| ramya      | f      |    767589 |
+| venu kumar | m      |     72739 |
+| uday kiran | m      |    773192 |
+| jagadish   | m      |     76659 |
+| bhagya     | f      |     70999 |
+| sameera    | f      |     72739 |
+| kiran      | m      |  77319232 |
++------------+--------+-----------+
+9 rows in set (0.00 sec)
+
+mysql> select *from w.faculty order by dob;
++--------+----------+--------+------------+--------------+-----------+---------+
+| fac_no | fac_name | gender | dob        | date_of_join | mobile_no | dept_no |
++--------+----------+--------+------------+--------------+-----------+---------+
+|   1544 | ram      | m      | 1983-05-01 | 2020-01-01   |      7344 |       6 |
+|   4343 | prasad   | m      | 1988-03-05 | 2013-11-14   |     98899 |       7 |
+|   4313 | paul     | m      | 1988-03-07 | 2014-01-14   |     98862 |       9 |
+|   4345 | satya    | f      | 1989-03-07 | 2014-12-01   |     98899 |       1 |
+|   4777 | raja     | m      | 1989-07-07 | 2015-12-01   |     96776 |       1 |
+|   4118 | padma    | f      | 1992-12-06 | 2013-01-10   |     79996 |       7 |
+|   4645 | lakshmi  | f      | 1999-07-09 | 2013-12-09   |     96776 |       9 |
+|   4878 | rama     | m      | 1999-10-06 | 2013-09-09   |     76676 |       7 |
++--------+----------+--------+------------+--------------+-----------+---------+
+8 rows in set (0.02 sec)
