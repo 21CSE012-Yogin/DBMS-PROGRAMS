@@ -1,1 +1,43 @@
+mysql> insert into w.student values(192125002,"monish","m","2003-11-18",8610893078,"chennai");
+Query OK, 1 row affected (0.01 sec)
 
+mysql> select *from w.student;
++-----------+------+--------+------------+-----------+---------+
+| reg_no    | name | gender | dob        | mobile_no | city    |
++-----------+------+--------+------------+-----------+---------+
+| 192125002 |monish| m      | 2002-11-18 | 861089378 | chennai |
++-----------+------+--------+------------+-----------+---------+
+1 row in set (0.00 sec)
+mysql> update w.student set name="karthik" where reg_no=192125002;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+mysql> insert into w.faculty values(1234, "sami","m", "1999-02-01","2020-01-01",7731,06);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into w.faculty values(1544, "ram","m", "1989-02-21","2020-01-01",7344,06);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> update w.faculty set dob="1983-05-01" where fac_name="ram";
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> delete from w.faculty where fac_name="sami";
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select *from w.student;
++-----------+-------+--------+------------+-----------+---------+
+| reg_no    | name  | gender | dob        | mobile_no | city    |
++-----------+-------+--------+------------+-----------+---------+
+| 192125002 |karthik| m      | 2002-11-18 | 861089378 | chennai |
++-----------+-------+--------+------------+-----------+---------+
+1 row in set (0.00 sec)
+
+mysql> select *from w.faculty;
++--------+----------+--------+------------+--------------+-----------+---------+
+| fac_no | fac_name | gender | dob        | date_of_join | mobile_no | dept_no |
++--------+----------+--------+------------+--------------+-----------+---------+
+|   1544 | ram      | m      | 1983-05-01 | 2020-01-01   |      7344 |       6 |
++--------+----------+--------+------------+--------------+-----------+---------+
+1 row in set (0.00 sec)
