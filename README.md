@@ -137,4 +137,8 @@
 
 
 ## Experiment 17
-[Experiment 17 Queries]()
+[Experiment 17 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2017)
+
+![image](https://user-images.githubusercontent.com/113223779/191771369-9d7e7bfb-4bb7-4b3d-9b6e-8483eded98d3.png)
+
+![image](https://user-images.githubusercontent.com/113223779/191771493-4b7b8087-6e52-4a61-aac9-ed31c2489f04.png)
