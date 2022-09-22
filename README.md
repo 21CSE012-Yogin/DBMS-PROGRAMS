@@ -128,3 +128,13 @@
 ![image](https://user-images.githubusercontent.com/113223779/191556990-e0e606a7-9954-4f90-bd8e-f6c0a9a55fd3.jpg)
 
 ![image](https://user-images.githubusercontent.com/113223779/191560185-57ba7372-e472-467b-98b5-ad6ccc8d51c0.jpg)
+
+
+## Experiment 16
+[Experiment 16 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2016)
+
+![image](https://user-images.githubusercontent.com/113223779/191770680-c73a621d-a1cd-4133-88cf-87de6d17d830.png)
+
+
+## Experiment 17
+[Experiment 17 Queries]()
