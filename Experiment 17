@@ -1,0 +1,24 @@
+mysql> use student _ audit;
+Database changed
+mysql> DELIMITER //
+mysql> CREATE TRIGGER before_student_update
+    -> BEFORE UPDATE ON student
+    -> FOR EACH ROW
+    -> BEGIN
+    -> INSERT INTO student_audit
+    -> SET action ='update',
+    -> student_id =OLD.Name,
+    -> changedat = NOW();
+    -> END //
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> DELIMITER //
+mysql> update student set name ='tony stark_c'where id=3 //
+ERROR 1054 (42S22): Unknown column 'id' in 'where clause'
+mysql> select * from student audit;
++------+------------+-----------+--------------+--------+
+| idno | student_id | lastname  | changeofdate | action |
++------+------------+-----------+--------------+--------+
+|    1 |          3 | tonystark |     20190812 | update |
++------+------------+-----------+--------------+--------+
+1 row in set (0.00 sec)
