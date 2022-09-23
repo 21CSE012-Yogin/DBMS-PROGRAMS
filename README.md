@@ -149,3 +149,10 @@
 
 ![image](https://user-images.githubusercontent.com/113223779/191773951-8ece8071-23f9-4b9c-8b19-7e7aa81257db.png)
 
+
+## Experiment 19
+[Experiment 19 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2019)
+
+![image](https://user-images.githubusercontent.com/113223779/191883725-f6cdce18-7f03-4f76-a8dc-93d80ad043ba.png)
+
+
