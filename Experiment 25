@@ -1,0 +1,131 @@
+mysql> alter table progess add(sub char(10));
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc progess;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| studentname | char(10) | YES  |     | NULL    |       |
+| regno       | int(10)  | NO   | PRI | NULL    |       |
+| semno       | int(10)  | YES  |     | NULL    |       |
+| marks       | int(10)  | YES  |     | NULL    |       |
+| sub         | char(10) | YES  |     | NULL    |       |
++-------------+----------+------+-----+---------+-------+
+5 rows in set (0.04 sec)
+
+mysql> insert into progess values('Anvesh',493,1,96,'maths');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into progess values('Anvesh',493,1,99,'C');
+ERROR 1062 (23000): Duplicate entry '493' for key 'PRIMARY'
+mysql> alter table progess drop regno;
+Query OK, 1 row affected (0.05 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> desc progess;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| studentname | char(10) | YES  |     | NULL    |       |
+| semno       | int(10)  | YES  |     | NULL    |       |
+| marks       | int(10)  | YES  |     | NULL    |       |
+| sub         | char(10) | YES  |     | NULL    |       |
++-------------+----------+------+-----+---------+-------+
+4 rows in set (0.04 sec)
+
+mysql> alter table progess add(regno int(10));
+Query OK, 1 row affected (0.05 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> insert into progess values('Anvesh',493,1,99,'C');
+ERROR 1366 (HY000): Incorrect integer value: 'C' for column 'regno' at row 1
+mysql> desc progess;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| studentname | char(10) | YES  |     | NULL    |       |
+| semno       | int(10)  | YES  |     | NULL    |       |
+| marks       | int(10)  | YES  |     | NULL    |       |
+| sub         | char(10) | YES  |     | NULL    |       |
+| regno       | int(10)  | YES  |     | NULL    |       |
++-------------+----------+------+-----+---------+-------+
+5 rows in set (0.04 sec)
+
+mysql> insert into progess values('Anvesh',1,99,'C',493);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into progess values('Anvesh',1,96,'DBMS',493);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from progess;
++-------------+-------+-------+-------+-------+
+| studentname | semno | marks | sub   | regno |
++-------------+-------+-------+-------+-------+
+| Anvesh      |     1 |    96 | maths |  NULL |
+| Anvesh      |     1 |    99 | C     |   493 |
+| Anvesh      |     1 |    96 | DBMS  |   493 |
++-------------+-------+-------+-------+-------+
+3 rows in set (0.00 sec)
+
+mysql> update progess set regno=493 where sub='maths';
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from progess;
++-------------+-------+-------+-------+-------+
+| studentname | semno | marks | sub   | regno |
++-------------+-------+-------+-------+-------+
+| Anvesh      |     1 |    96 | maths |   493 |
+| Anvesh      |     1 |    99 | C     |   493 |
+| Anvesh      |     1 |    96 | DBMS  |   493 |
++-------------+-------+-------+-------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into progess values('Anvesh',2,90,'PICO',493);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into progess values('Anvesh',2,92,'CHEM',493);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into progess values('Anvesh',2,95,'PHY',493);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into progess values('Anvesh',3,25,'PDSD',493);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into progess values('Anvesh',3,85,'PyP',493);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select* from progess;
++-------------+-------+-------+-------+-------+
+| studentname | semno | marks | sub   | regno |
++-------------+-------+-------+-------+-------+
+| Anvesh      |     1 |    96 | maths |   493 |
+| Anvesh      |     1 |    99 | C     |   493 |
+| Anvesh      |     1 |    96 | DBMS  |   493 |
+| Anvesh      |     2 |    90 | PICO  |   493 |
+| Anvesh      |     2 |    92 | CHEM  |   493 |
+| Anvesh      |     2 |    95 | PHY   |   493 |
+| Anvesh      |     3 |    25 | PDSD  |   493 |
+| Anvesh      |     3 |    85 | PyP   |   493 |
++-------------+-------+-------+-------+-------+
+8 rows in set (0.00 sec)
+
+mysql> insert into progess values('ram',3,85,'PyP',443);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into progess values('ravi',3,85,'PyP',193);
+Query OK, 1 row affected (0.03 sec)mysql> select * from progess where studentname='Anvesh';
++-------------+-------+-------+-------+-------+
+| studentname | semno | marks | sub   | regno |
++-------------+-------+-------+-------+-------+
+| Anvesh      |     1 |    96 | maths |   493 |
+| Anvesh      |     1 |    99 | C     |   493 |
+| Anvesh      |     1 |    96 | DBMS  |   493 |
+| Anvesh      |     2 |    90 | PICO  |   493 |
+| Anvesh      |     2 |    92 | CHEM  |   493 |
+| Anvesh      |     2 |    95 | PHY   |   493 |
+| Anvesh      |     3 |    25 | PDSD  |   493 |
+| Anvesh      |     3 |    85 | PyP   |   493 |
++-------------+-------+-------+-------+-------+
