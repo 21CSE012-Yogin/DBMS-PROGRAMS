@@ -1,0 +1,32 @@
+mysql> create table car(carno char(20) primary key,customername char(10),phoneno int(10),proofid char(20),billamount int(10));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc car;
++--------------+----------+------+-----+---------+-------+
+| Field        | Type     | Null | Key | Default | Extra |
++--------------+----------+------+-----+---------+-------+
+| carno        | char(20) | NO   | PRI | NULL    |       |
+| customername | char(10) | YES  |     | NULL    |       |
+| phoneno      | int(10)  | YES  |     | NULL    |       |
+| proofid      | char(20) | YES  |     | NULL    |       |
+| billamount   | int(10)  | YES  |     | NULL    |       |
++--------------+----------+------+-----+---------+-------+
+5 rows in set (0.04 sec)
+
+mysql> insert into car values('AP16EA1234','Sai',8546976,'pancard',15000);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into car values('AP16KA5634','Ram',854456976,'passport',1500);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into car values('TN16KA5634','Charan',124577976,'passport',3000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select *from car;
++------------+--------------+-----------+----------+------------+
+| carno      | customername | phoneno   | proofid  | billamount |
++------------+--------------+-----------+----------+------------+
+| AP16EA1234 | Sai          |   8546976 | pancard  |      15000 |
+| AP16KA5634 | Ram          | 854456976 | passport |       1500 |
+| TN16KA5634 | Charan       | 124577976 | passport |       3000 |
++------------+--------------+-----------+----------+------------+
