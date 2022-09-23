@@ -187,4 +187,17 @@
 
 
 ## Experiment 25
-[Experiment 25 Queries]()
+[Experiment 25 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2025)
+
+![image](https://user-images.githubusercontent.com/113223779/191900480-7152a752-bdda-452c-8823-90a49a8b834d.png)
+
+![image](https://user-images.githubusercontent.com/113223779/191900499-78f9ce1c-53c8-4cd6-93c7-52d394768368.png)
+
+![image](https://user-images.githubusercontent.com/113223779/191900517-cfe577d4-5588-4512-b79e-64e91002e465.png)
+
+![image](https://user-images.githubusercontent.com/113223779/191900536-8fe87fee-cf2a-4cfa-97e2-bd803b5508b1.png)
+
+![image](https://user-images.githubusercontent.com/113223779/191900548-d3c25655-a49e-4ba3-b0a9-545329848c74.png)
+
+
+
