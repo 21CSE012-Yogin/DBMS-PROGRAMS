@@ -1,0 +1,36 @@
+mysql> CREATE TABLE Hospital (Patient_ID int(10),Patient_Name char(10),Mobile_No int(10),Gender char(1),Age int(3),Doctor_ID int(10),Doctor_Name char(10),Bill_Amount int(10));
+Query OK, 0 rows affected, 5 warnings (0.24 sec)
+
+mysql> DESC Hospital;
++--------------+----------+------+-----+---------+-------+
+| Field        | Type     | Null | Key | Default | Extra |
++--------------+----------+------+-----+---------+-------+
+| Patient_ID   | int      | YES  |     | NULL    |       |
+| Patient_Name | char(10) | YES  |     | NULL    |       |
+| Mobile_No    | int      | YES  |     | NULL    |       |
+| Gender       | char(1)  | YES  |     | NULL    |       |
+| Age          | int      | YES  |     | NULL    |       |
+| Doctor_ID    | int      | YES  |     | NULL    |       |
+| Doctor_Name  | char(10) | YES  |     | NULL    |       |
+| Bill_Amount  | int      | YES  |     | NULL    |       |
++--------------+----------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> INSERT INTO Hospital VALUES(101,'Sarabesh',8564479,'M',32,8001,'Sridhar',50000);
+Query OK, 1 row affected (0.14 sec)
+
+mysql> INSERT INTO Hospital VALUES(102,'Udhaya',8564754,'F',39,8005,'Raghav',50000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO Hospital VALUES(103,'Lexmi',8564458,'M',28,8012,'Usain',50200);
+Query OK, 1 row affected (0.15 sec)
+
+mysql> SELECT * FROM Hospital;
++------------+--------------+-----------+--------+------+-----------+-------------+-------------+
+| Patient_ID | Patient_Name | Mobile_No | Gender | Age  | Doctor_ID | Doctor_Name | Bill_Amount |
++------------+--------------+-----------+--------+------+-----------+-------------+-------------+
+|        101 | Sarabesh     |   8564479 | M      |   32 |      8001 | Sridhar     |       50000 |
+|        102 | Udhaya       |   8564754 | F      |   39 |      8005 | Raghav      |       50000 |
+|        103 | Lexmi        |   8564458 | M      |   28 |      8012 | Usain       |       50200 |
++------------+--------------+-----------+--------+------+-----------+-------------+-------------+
+3 rows in set (0.00 sec)
