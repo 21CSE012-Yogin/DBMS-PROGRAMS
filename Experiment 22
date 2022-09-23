@@ -1,0 +1,28 @@
+mysql> select dname,count(*) from employees e,department d where e.dno= d.dnumber group by d.dname having count(*)>=2;
++---------------+----------+
+| dname         | count(*) |
++---------------+----------+
+| research      |        3 |
+| adminstration |        2 |
++---------------+----------+
+2 rows in set (0.03 sec)
+
+mysql> select fname,lname from employees where to_char(bdate,'yy')=90;
+ERROR 1305 (42000): FUNCTION w.to_char does not exist
+mysql> select fname,lname from employees where (bdate,'yy')=90;
+ERROR 1241 (21000): Operand should contain 2 column(s)
+mysql> select fname,lname from employees where bdate between "1990-01-01" and "1990-12-30";
+Empty set (0.00 sec)
+
+mysql> select fname,lname ,dname from employees join department where dno=dnumber;
++----------+---------+---------------+
+| fname    | lname   | dname         |
++----------+---------+---------------+
+| john     | smith   | research      |
+| franklin | wing    | research      |
+| alida    | zelaya  | adminstration |
+| jennifer | waface  | adminstration |
+| ramesh   | narayan | research      |
+| joyce    | english | headquarters  |
++----------+---------+---------------+
+6 rows in set (0.00 sec)
