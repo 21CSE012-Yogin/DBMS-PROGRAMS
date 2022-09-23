@@ -163,5 +163,11 @@
 
 
 ## Experiment 21
-[Experiment 21 Queries]()
+[Experiment 21 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2021)
+
+![image](https://user-images.githubusercontent.com/113223779/191884220-0fac5548-69ff-4cfd-9383-c7217ffb9612.png)
+
+
+## Experiment 22
+[Experiment 22 Queries]()
 
