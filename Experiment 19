@@ -1,0 +1,82 @@
+create table employees(fname varchar(10),mnit varchar(10),lname varchar(10),ssn int(20), bdate date, address varchar(20),sex varchar(1),salary int(10),superssn int(10),dno int(2));
+Query OK, 0 rows affected, 4 warnings (0.06 sec)
+
+mysql> insert into employees values("john","b","smith",null,"1955-01-09",null,"M",30000,null,5);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employees values("franklin","t","wing",null,"1955-12-06",null,"M",40000,null,5);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employees values("alida","j","zelaya",null,"1998-07-19",null,"M",25000,null,4);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employees values("jennifer","s","waface",null,"1941-06-20",null,"F",43000,null,4);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employees values("ramesh","k","narayan",null,"1962-09-15",null,"M",38000,null,5);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employees values("joyce","a","english",null,"1972-07-31",null,"F",25000,null,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create table department(dname varchar(20),dnumber int(2), mgrssn int(20),mgrstartdate date);
+Query OK, 0 rows affected, 2 warnings (0.04 sec)
+
+mysql> insert into department values("research",5,333445565,"1966-05-22");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into department values("adminstration",4,987654321,"1995-01-01")
+    -> ;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into department values("headquarters",1,988665565,"1981-06-19");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select *from employees;
++----------+------+---------+------+------------+---------+------+--------+----------+------+
+| fname    | mnit | lname   | ssn  | bdate      | address | sex  | salary | superssn | dno  |
++----------+------+---------+------+------------+---------+------+--------+----------+------+
+| john     | b    | smith   | NULL | 1955-01-09 | NULL    | M    |  30000 |     NULL |    5 |
+| franklin | t    | wing    | NULL | 1955-12-06 | NULL    | M    |  40000 |     NULL |    5 |
+| alida    | j    | zelaya  | NULL | 1998-07-19 | NULL    | M    |  25000 |     NULL |    4 |
+| jennifer | s    | waface  | NULL | 1941-06-20 | NULL    | F    |  43000 |     NULL |    4 |
+| ramesh   | k    | narayan | NULL | 1962-09-15 | NULL    | M    |  38000 |     NULL |    5 |
+| joyce    | a    | english | NULL | 1972-07-31 | NULL    | F    |  25000 |     NULL |    1 |
++----------+------+---------+------+------------+---------+------+--------+----------+------+
+6 rows in set (0.00 sec)
+
+mysql> select *from department;
++---------------+---------+-----------+--------------+
+| dname         | dnumber | mgrssn    | mgrstartdate |
++---------------+---------+-----------+--------------+
+| research      |       5 | 333445565 | 1966-05-22   |
+| adminstration |       4 | 987654321 | 1995-01-01   |
+| headquarters  |       1 | 988665565 | 1981-06-19   |
++---------------+---------+-----------+--------------+
+3 rows in set (0.00 sec)
+
+mysql> select sum(salary) from employees;
++-------------+
+| sum(salary) |
++-------------+
+|      201000 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select sum(salary),max(salary),min(salary),avg(salary) from employees;
++-------------+-------------+-------------+-------------+
+| sum(salary) | max(salary) | min(salary) | avg(salary) |
++-------------+-------------+-------------+-------------+
+|      201000 |       43000 |       25000 |  33500.0000 |
++-------------+-------------+-------------+-------------+
+1 row in set (0.02 sec)
+
+mysql> select fname,lname from employees where dno=5;
++----------+---------+
+| fname    | lname   |
++----------+---------+
+| john     | smith   |
+| franklin | wing    |
+| ramesh   | narayan |
++----------+---------+
+3 rows in set (0.00 sec)
