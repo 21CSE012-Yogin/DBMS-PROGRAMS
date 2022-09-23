@@ -1,0 +1,33 @@
+mysql> select * from employ;
++----------+------+---------+------------+------+--------+------+
+| fname    | mnit | lname   | bdate      | sex  | salary | dno  |
++----------+------+---------+------------+------+--------+------+
+| john     | b    | smith   | 1955-01-09 | m    | 30000  | 5    |
+| franidh  | t    | wong    | 1955-12-08 | m    | 40000  | 5    |
+| alcia    | j    | zolaya  | 1958-07-19 | f    | 25000  | 4    |
+| jennifer | s    | walace  | 1941-06-20 | f    | 43000  | 4    |
+| ramesh   | k    | narayan | 1962-09-15 | m    | 38000  | 5    |
+| joyce    | a    | english | 1972-07-15 | f    | 25000  | 5    |
+| ahmed    | v    | jabber  | 1959-03-29 | m    | 25000  | 4    |
+| james    | e    | bong    | 1937-11-10 | m    | 55000  | 1    |
++----------+------+---------+------------+------+--------+------+
+8 rows in set (0.01 sec)
+
+mysql> select sum(salary),max(salary),min(salary),avg(salary) from employ;
++-------------+-------------+-------------+-------------+
+| sum(salary) | max(salary) | min(salary) | avg(salary) |
++-------------+-------------+-------------+-------------+
+|      281000 | 55000       | 25000       |       35125 |
++-------------+-------------+-------------+-------------+
+1 row in set (0.02 sec)
+
+mysql> select fname,lname from employ where dno=5;
++---------+---------+
+| fname   | lname   |
++---------+---------+
+| john    | smith   |
+| franidh | wong    |
+| ramesh  | narayan |
+| joyce   | english |
++---------+---------+
+4 rows in set (0.01 sec)
