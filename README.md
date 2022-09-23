@@ -178,3 +178,13 @@
 [Experiment 23 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2023)
 
 ![image](https://user-images.githubusercontent.com/113223779/191899773-182898bf-6920-4b75-a638-e35babb47503.png)
+
+
+## Experiment 24
+[Experiemnt 24 Queries](https://github.com/21CSE012-Yogin/DBMS-PROGRAMS/blob/main/Experiment%2024)
+
+![image](https://user-images.githubusercontent.com/113223779/191900152-a04461d3-8aca-40f6-9bc1-3e63f9fbf30f.png)
+
+
+## Experiment 25
+[Experiment 25 Queries]()
